@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    setTimeout(function(){
+        window.location.href = "page2.html";
+    }, 8000);   // goes to page 2 after 7 seconds
+</script>
+
+<head>
+    <title>Happy Maha Shivratri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            color:white;
+            background:url("back.avif") no-repeat center center/cover;
+            position:relative;
+            overflow:hidden;
+        }
+
+        /* Dark cinematic overlay */
+        body::before{
+            content:"";
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:linear-gradient(to bottom, rgba(0,0,80,0.7), rgba(0,0,0,0.95));
+            z-index:0;
+        }
+
+        .content{
+            position:relative;
+            z-index:1;
+        }
+
+        /* OM Symbol */
+        .om{
+    font-size:110px;   /* increased size */
+    color:gold;
+    text-shadow:0 0 30px gold, 0 0 60px orange;
+    margin-bottom:40px;
+    animation: glow 2s infinite alternate;
+}
+
+
+        @keyframes glow{
+            from{ text-shadow:0 0 10px gold;}
+            to{ text-shadow:0 0 40px orange;}
+        }
+
+        /* TITLE */
+        .title span{
+            display:inline-block;
+            opacity:0;
+            font-size:50px;
+            letter-spacing:3px;
+            text-shadow:0 0 20px cyan;
+        }
+
+        /* Different Direction Animations */
+        .title span:nth-child(1){ animation:leftIn 1s forwards 0.2s; }
+        .title span:nth-child(2){ animation:rightIn 1s forwards 0.4s; }
+        .title span:nth-child(3){ animation:topIn 1s forwards 0.6s; }
+        .title span:nth-child(4){ animation:bottomIn 1s forwards 0.8s; }
+        .title span:nth-child(5){ animation:leftIn 1s forwards 1s; }
+        .title span:nth-child(7){ animation:rightIn 1s forwards 1.2s; }
+        .title span:nth-child(8){ animation:topIn 1s forwards 1.4s; }
+        .title span:nth-child(9){ animation:bottomIn 1s forwards 1.6s; }
+        .title span:nth-child(10){ animation:leftIn 1s forwards 1.8s; }
+        .title span:nth-child(12){ animation:rightIn 1s forwards 2s; }
+        .title span:nth-child(13){ animation:topIn 1s forwards 2.2s; }
+        .title span:nth-child(14){ animation:bottomIn 1s forwards 2.4s; }
+        .title span:nth-child(15){ animation:leftIn 1s forwards 2.6s; }
+        .title span:nth-child(16){ animation:rightIn 1s forwards 2.8s; }
+        .title span:nth-child(17){ animation:topIn 1s forwards 3s; }
+        .title span:nth-child(18){ animation:bottomIn 1s forwards 3.2s; }
+        .title span:nth-child(19){ animation:leftIn 1s forwards 3.4s; }
+        .title span:nth-child(20){ animation:rightIn 1s forwards 3.6s; }
+
+        @keyframes leftIn{
+            from{ transform:translateX(-200px); opacity:0; }
+            to{ transform:translateX(0); opacity:1; }
+        }
+
+        @keyframes rightIn{
+            from{ transform:translateX(200px); opacity:0; }
+            to{ transform:translateX(0); opacity:1; }
+        }
+
+        @keyframes topIn{
+            from{ transform:translateY(-200px); opacity:0; }
+            to{ transform:translateY(0); opacity:1; }
+        }
+
+        @keyframes bottomIn{
+            from{ transform:translateY(200px); opacity:0; }
+            to{ transform:translateY(0); opacity:1; }
+        }
+
+        .sub{
+            margin-top:20px;
+            font-size:20px;
+            font-style:italic;
+            opacity:0;
+            animation: fadeIn 2s forwards 4s;
+        }
+
+        @keyframes fadeIn{
+            from{opacity:0;}
+            to{opacity:1;}
+        }
+
+        @media(max-width:600px){
+    .title span{ font-size:28px; }
+    .om{ font-size:70px; }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="om">ॐ</div>
+
+        <h1 class="title">
+            <span>H</span>
+            <span>A</span>
+            <span>P</span>
+            <span>P</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span>M</span>
+            <span>A</span>
+            <span>H</span>
+            <span>A</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>H</span>
+            <span>I</span>
+            <span>V</span>
+            <span>R</span>
+            <span>A</span>
+            <span>T</span>
+            <span>R</span>
+            <span>I</span>
+        </h1>
+
+        <div class="sub">Har Har Mahadev</div>
+
+    </div>
+
+</body>
+</html>
